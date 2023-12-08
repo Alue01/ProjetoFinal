@@ -1,0 +1,39 @@
+﻿@model ProjetoFinalAlue.Models.ProcedimentoRealizado
+@{
+    Layout = null;
+}
+<link href="~/css/imprimir.css" rel="stylesheet" />
+<h1><b>Exame</b></h1>
+<div>
+    <label><b>Clínica: SJ</b></label>
+</div>
+<div class="linha">
+    <div>
+        <label><b>Nome do Paciente:</b> @Html.DisplayFor(model => model.Cliente.ClienteNome)</label>
+    </div>
+    <div>
+        <label><b>Sexo:</b> @Html.DisplayFor(model => model.Cliente.ClienteSexo)</label>
+    </div>
+    <div>
+        <label><b>Telefone:</b> @Html.DisplayFor(model => model.Cliente.ClienteTelefone)</label>
+    </div>
+    <div>
+        <label><b>Cpf:</b> @Html.DisplayFor(model => model.Cliente.ClienteCpf)</label>
+    </div>
+</div>
+<div class="canto">
+    <label><b>Data e Hora da Coleta:</b>  @Html.DisplayFor(model => model.DataRealizadoId)</label>
+</div>
+<h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h1>
+<div>
+    <label><b>Nome do Profissional:</b> @Html.DisplayFor(model => model.Colaborador.ColaboradorNome)</label>
+</div>
+<div>
+    <label><b>Nome do Exame:</b> @Html.DisplayFor(model => model.Procedimentos.ProcedimentoNome)</label>
+</div>
+<h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h1>
+<div>
+    <label><b>Resultado:</b> @Html.DisplayNameFor(model => model.ObservacaoRealizadoId)</label>
+
+</div>
+<h1>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h1>
